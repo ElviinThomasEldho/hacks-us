@@ -1,9 +1,8 @@
-import * as React from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
-import { Textarea } from "@/components/ui/textarea"
+// import { Textarea } from "@/components/ui/textarea"
 import {
   Tooltip,
   TooltipContent,
@@ -11,12 +10,13 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 import { Facebook, Instagram, Linkedin, Moon, Send, Sun, Twitter } from "lucide-react"
+import { useEffect, useState } from "react"
 
 function FooterSection() {
-  const [isDarkMode, setIsDarkMode] = React.useState(true)
-  const [isChatOpen, setIsChatOpen] = React.useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(true)
+  // const [isChatOpen, setIsChatOpen] = useState(false)
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark")
     } else {

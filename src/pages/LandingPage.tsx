@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Particles } from "@/components/magicui/particles";
 import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import { LineShadowText } from "@/components/magicui/line-shadow-text";
@@ -9,8 +9,7 @@ import {
 } from "@/components/magicui/terminal";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { FooterSection } from "@/components/ui/footer-section";
-import { Calendar1Icon, CalendarIcon, MapPin, Pin, PinIcon } from "lucide-react";
-import { HyperText } from "@/components/magicui/hyper-text";
+import { CalendarIcon, MapPin } from "lucide-react";
 import { Globe } from "@/components/magicui/globe";
 
 const LandingPage: React.FC = () => {
