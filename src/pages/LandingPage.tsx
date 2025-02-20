@@ -3,14 +3,12 @@ import { Particles } from "@/components/magicui/particles";
 import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import { LineShadowText } from "@/components/magicui/line-shadow-text";
 import {
-  AnimatedSpan,
-  Terminal,
   TypingAnimation,
 } from "@/components/magicui/terminal";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { FooterSection } from "@/components/ui/footer-section";
-import { Book, CalendarIcon, Clock2, Home, MapPin, Phone, Play } from "lucide-react";
-import { Globe } from "@/components/magicui/globe";
+import { Book, CalendarIcon, Home, MapPin, Phone, Play } from "lucide-react";
+// import { Globe } from "@/components/magicui/globe";
 import { Timeline } from "@/components/ui/timeline";
 import { Feature } from "@/components/ui/feature-with-image-carousel";
 import { Badge } from "@/components/ui/badge";

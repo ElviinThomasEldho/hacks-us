@@ -1,7 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
 // import { Textarea } from "@/components/ui/textarea"
 import {
   Tooltip,
@@ -15,16 +12,13 @@ import {
   Instagram,
   Linkedin,
   Mail,
-  Moon,
   Phone,
-  Send,
-  Sun,
   Twitter,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
 function FooterSection() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, _] = useState(true);
   // const [isChatOpen, setIsChatOpen] = useState(false)
 
   useEffect(() => {
