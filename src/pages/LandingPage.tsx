@@ -9,20 +9,92 @@ import {
 } from "@/components/magicui/terminal";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { FooterSection } from "@/components/ui/footer-section";
-import { CalendarIcon, MapPin } from "lucide-react";
+import { Book, CalendarIcon, Clock2, Home, MapPin, Phone, Play } from "lucide-react";
 import { Globe } from "@/components/magicui/globe";
+import { Timeline } from "@/components/ui/timeline";
+import { Feature } from "@/components/ui/feature-with-image-carousel";
+import { Badge } from "@/components/ui/badge";
+import { Dock } from "@/components/ui/dock-two";
 
 const LandingPage: React.FC = () => {
-  // const [scrollY, setScrollY] = useState(0);
+  const timelineData = [
+    {
+      title: "22 Feb",
+      content: (
+        <div>
+          <h3 className="text-2xl">Hackathon Regsitration Opens</h3>
+        </div>
+      ),
+    },
+    {
+      title: "26 Feb",
+      content: (
+        <div>
+          <h3 className="text-2xl">React Workshop</h3>
+          <Badge>Precursor</Badge>{" "}
+        </div>
+      ),
+    },
+    {
+      title: "27 Feb",
+      content: (
+        <div>
+          <h3 className="text-2xl">RAG Workshop</h3>
+          <Badge>Precursor</Badge>{" "}
+        </div>
+      ),
+    },
+    {
+      title: "1 Mar",
+      content: (
+        <div>
+          <h3 className="text-2xl">UI/UX Hackathon</h3>
+          <Badge>Precursor</Badge>
+        </div>
+      ),
+    },
+    {
+      title: "2 - 8 Mar",
+      content: (
+        <div>
+          <h3 className="text-2xl">Game Jam</h3>
+          <Badge>Precursor</Badge>{" "}
+        </div>
+      ),
+    },
+    {
+      title: "7 Mar",
+      content: (
+        <div>
+          <h3 className="text-2xl">Hackathon Registration Closes</h3>
+        </div>
+      ),
+    },
+    {
+      title: "14 Mar",
+      content: (
+        <div>
+          <h3 className="text-2xl">Hackathon Starts</h3>
+        </div>
+      ),
+    },
+    {
+      title: "16 Mar",
+      content: (
+        <div>
+          <h3 className="text-2xl">Hackathon Ends</h3>
+        </div>
+      ),
+    },
+  ];
 
-  // // Update background position based on scroll
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrollY(-window.scrollY);
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
+  const items = [
+    { icon: Home, label: "Home" },
+    { icon: Book, label: "About" },
+    // { icon: Home, label: "HackS'US" },
+    { icon: Play, label: "Timeline" },
+    { icon: Phone, label: "Contact" },
+  ]
 
   return (
     <div
@@ -32,6 +104,8 @@ const LandingPage: React.FC = () => {
         backgroundPosition: `center ${scrollY * 0.5}px`, // Moves in reverse direction
       }}
     >
+      <Dock items={items} className="fixed bottom-0 z-100" />
+
       {/* Background Particles */}
       <Particles
         className="fixed top-0 right-0 h-screen w-screen z-0"
@@ -60,26 +134,41 @@ const LandingPage: React.FC = () => {
 
         <div className="flex justify-start items-center gap-2">
           <CalendarIcon />
-          <TypingAnimation duration={3} className="font-redhat text-2xl font-bold my-2">
+          <TypingAnimation className="font-redhat text-2xl font-bold my-2">
             15th - 16th March 2025
           </TypingAnimation>
         </div>
-        
+
         <div className="flex justify-start items-center gap-2">
           <MapPin />
-          <TypingAnimation duration={3} className="font-redhat text-2xl font-bold my-2">
+          <TypingAnimation className="font-redhat text-2xl font-bold my-2">
             Rajagiri School of Engineering and Technology, Kochi
           </TypingAnimation>
         </div>
       </section>
 
       {/* Scrolling Text */}
-      <VelocityScroll className="font-redhat text-white" defaultVelocity={0.5}>
+      <VelocityScroll
+        className="font-redhat text-white my-10"
+        defaultVelocity={0.5}
+      >
         HACKS'US - EDITION IV |
       </VelocityScroll>
 
+      <Feature />
+
+      <Timeline data={timelineData} />
+
+      
+      <VelocityScroll
+        className="font-redhat text-white py-10 bg-neutral-950/80"
+        defaultVelocity={0.5}
+      >
+        REGISTER NOW | 
+      </VelocityScroll>
+
       {/* Terminal Output */}
-      <main className="my-20 w-screen flex justify-center items-center">
+      {/* <main className="my-20 w-screen flex justify-center items-center">
         <Terminal className="overflow-hidden text-left">
           <TypingAnimation>&gt; pnpm dlx shadcn@latest init</TypingAnimation>
 
@@ -103,13 +192,11 @@ const LandingPage: React.FC = () => {
             </AnimatedSpan>
           ))}
 
-          {/* File Update Info */}
           <AnimatedSpan delay={6000} className="text-blue-500">
             <span>ℹ Updated 1 file:</span>
             <span className="pl-2">- lib/utils.ts (optimized for Hacksus)</span>
           </AnimatedSpan>
 
-          {/* Success Messages */}
           <TypingAnimation delay={6500} className="text-muted-foreground">
             🚀 Success! Hacksus project initialization completed.
           </TypingAnimation>
@@ -118,9 +205,9 @@ const LandingPage: React.FC = () => {
             You may now add components and start building!
           </TypingAnimation>
         </Terminal>
-      </main>
+      </main> */}
 
-      <Globe className="relative"  />
+      {/* <Globe className="relative"  /> */}
       <FooterSection />
     </div>
   );
