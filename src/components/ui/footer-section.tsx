@@ -30,7 +30,10 @@ function FooterSection() {
   }, [isDarkMode]);
 
   return (
-    <footer className="relative border-t bg-background text-foreground transition-colors duration-300">
+    <footer
+      id="contact"
+      className="relative border-t bg-background text-foreground transition-colors duration-300"
+    >
       <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8 font-redhat">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="relative grid gap-12 md:grid-cols-2 lg:grid-cols-2 justify-center items-center">
@@ -187,14 +190,14 @@ function FooterSection() {
                 </Tooltip>
               </TooltipProvider>
             </div>
-              <p className="flex gap-2 my-5">
-                <Globe size={20} /> www.rsetiedc.in
-              </p>
-              {/* <p>Email: rsetiedc@rajagiritech.edu.in</p> */}
+            <p className="flex gap-2 my-5">
+              <Globe size={20} /> www.rsetiedc.in
+            </p>
+            {/* <p>Email: rsetiedc@rajagiritech.edu.in</p> */}
 
-              <p className="flex gap-2 my-5">
-                <Mail size={20} /> rsetiedc@rajagiritech.edu.in
-              </p>
+            <p className="flex gap-2 my-5">
+              <Mail size={20} /> rsetiedc@rajagiritech.edu.in
+            </p>
             {/* <div className="flex items-center space-x-2">
               <Sun className="h-4 w-4" />
               <Switch

@@ -1,9 +1,5 @@
 "use client";
-import {
-  useScroll,
-  useTransform,
-  motion,
-} from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
@@ -37,6 +33,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     //   ref={containerRef}
     // >
     <div
+      id="timeline"
       className="w-full font-redhat md:px-10 bg-neutral-950/80 bg-opacity-50"
       ref={containerRef}
     >

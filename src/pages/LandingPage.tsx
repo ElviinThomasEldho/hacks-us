@@ -2,9 +2,7 @@ import React from "react";
 import { Particles } from "@/components/magicui/particles";
 import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 import { LineShadowText } from "@/components/magicui/line-shadow-text";
-import {
-  TypingAnimation,
-} from "@/components/magicui/terminal";
+import { TypingAnimation } from "@/components/magicui/terminal";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { FooterSection } from "@/components/ui/footer-section";
 import { Book, CalendarIcon, Home, MapPin, Phone, Play } from "lucide-react";
@@ -86,13 +84,25 @@ const LandingPage: React.FC = () => {
     },
   ];
 
+  function scrollToSection(sectionId: string) {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+  }
+
   const items = [
-    { icon: Home, label: "Home" },
-    { icon: Book, label: "About" },
+    { icon: Home, label: "Home", onClick: () => scrollToSection("home") },
+    { icon: Book, label: "About", onClick: () => scrollToSection("about") },
     // { icon: Home, label: "HackS'US" },
-    { icon: Play, label: "Timeline" },
-    { icon: Phone, label: "Contact" },
-  ]
+    {
+      icon: Play,
+      label: "Timeline",
+      onClick: () => scrollToSection("timeline"),
+    },
+    {
+      icon: Phone,
+      label: "Contact",
+      onClick: () => scrollToSection("contact"),
+    },
+  ];
 
   return (
     <div
@@ -113,7 +123,7 @@ const LandingPage: React.FC = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative z-10 flex flex-col items-center justify-center text-center min-h-[90vh]">
+      <section id="home" className="relative z-10 flex flex-col items-center justify-center text-center min-h-[90vh]">
         {/* Logo & Title */}
         <header className="flex items-center justify-center">
           <img src="src/img/logo_outline.png" alt="logo" className="w-24" />
@@ -157,12 +167,11 @@ const LandingPage: React.FC = () => {
 
       <Timeline data={timelineData} />
 
-      
       <VelocityScroll
         className="font-redhat text-white py-10 bg-neutral-950/80"
         defaultVelocity={0.5}
       >
-        REGISTER NOW | 
+        REGISTER NOW |
       </VelocityScroll>
 
       {/* Terminal Output */}

@@ -9,7 +9,7 @@ import {
 
 function Feature() {
   return (
-    <div className="w-full py-20 lg:py-40 font-redhat px-50">
+    <div id="about" className="w-full py-20 lg:py-40 font-redhat px-50">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 justify-end items-end  gap-10">
           <div className="w-full max-w-full px-6">

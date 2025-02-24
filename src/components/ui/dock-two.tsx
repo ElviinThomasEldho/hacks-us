@@ -93,7 +93,7 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
             {/* Split items into two parts */}
             <div className="flex flex-row-reverse gap-3">
               {items.slice(0, Math.ceil(items.length / 2)).map((item) => (
-                <DockIconButton key={item.label} {...item} />
+                <DockIconButton key={item.label} onClick={item.onClick} {...item} />
               ))}
             </div>
 
