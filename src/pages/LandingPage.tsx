@@ -11,6 +11,7 @@ import { Timeline } from "@/components/ui/timeline";
 import { Feature } from "@/components/ui/feature-with-image-carousel";
 import { Badge } from "@/components/ui/badge";
 import { Dock } from "@/components/ui/dock-two";
+import { HyperText } from "@/components/magicui/hyper-text";
 
 const LandingPage: React.FC = () => {
   const timelineData = [
@@ -123,7 +124,10 @@ const LandingPage: React.FC = () => {
       />
 
       {/* Hero Section */}
-      <section id="home" className="relative z-10 flex flex-col items-center justify-center text-center min-h-[90vh]">
+      <section
+        id="home"
+        className="relative z-10 flex flex-col items-center justify-center text-center min-h-[90vh]"
+      >
         {/* Logo & Title */}
         <header className="flex items-center justify-center">
           <img src="/src/img/logo_outline.png" alt="logo" className="w-24" />
@@ -139,19 +143,20 @@ const LandingPage: React.FC = () => {
         <InteractiveHoverButton className="my-5 font-redhat">
           Register Now
         </InteractiveHoverButton>
+        <div className="flex flex-col md:flex-row">
+          <div className="flex justify-start items-center gap-2 px-10">
+            <CalendarIcon size="20px" className="w-min-30" />
+            <TypingAnimation className="font-redhat text-xl font-bold my-2 max-w-60">
+              14th - 16th March 2025
+            </TypingAnimation>
+          </div>
 
-        <div className="flex justify-start items-center gap-2 px-10">
-          <CalendarIcon />
-          <TypingAnimation className="font-redhat text-xl font-bold my-2">
-            14th - 16th March 2025
-          </TypingAnimation>
-        </div>
-
-        <div className="flex justify-start items-center gap-2 px-10">
-          <MapPin />
-          <TypingAnimation className="font-redhat text-xl font-bold my-2">
-            Rajagiri School of Engineering and Technology, Kochi
-          </TypingAnimation>
+          <div className="flex justify-start items-center gap-2 px-10">
+            <MapPin size="20px" />
+            <TypingAnimation className="font-redhat text-lg font-bold my-2 max-w-60 text-left">
+              Rajagiri School of Engineering and Technology, Kochi
+            </TypingAnimation>
+          </div>
         </div>
       </section>
 
@@ -165,10 +170,40 @@ const LandingPage: React.FC = () => {
 
       <Feature />
 
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-10  bg-linear-to-t from-neutral-950/80 via-neutral-950/60 w-screen py-30 px-20">
+        <div className="flex flex-col items-center">
+          <HyperText
+            className="font-redhat text-3xl md:text-3xl text-center"
+            animateOnHover={false}
+          >
+            100+
+          </HyperText>
+          <p className="font-redhat text-2xl">Teams</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <HyperText
+            className="font-redhat text-3xl md:text-3xl text-center"
+            animateOnHover={false}
+          >
+            4 Lacs
+          </HyperText>
+          <p className="font-redhat text-2xl">Prize Pool</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <HyperText
+            className="font-redhat text-3xl md:text-3xl text-center"
+            animateOnHover={false}
+          >
+            4
+          </HyperText>
+          <p className="font-redhat text-2xl">Tracks</p>
+        </div>
+      </section>
+
       <Timeline data={timelineData} />
 
       <VelocityScroll
-        className="font-redhat text-white py-10 bg-neutral-950/80"
+        className="font-redhat text-white py-10 bg-linear-to-b from-neutral-950/80 to-background"
         defaultVelocity={0.5}
       >
         REGISTER NOW |
