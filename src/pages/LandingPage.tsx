@@ -140,16 +140,16 @@ const LandingPage: React.FC = () => {
           Register Now
         </InteractiveHoverButton>
 
-        <div className="flex justify-start items-center gap-2">
+        <div className="flex justify-start items-center gap-2 px-10">
           <CalendarIcon />
-          <TypingAnimation className="font-redhat text-2xl font-bold my-2">
-            15th - 16th March 2025
+          <TypingAnimation className="font-redhat text-xl font-bold my-2">
+            14th - 16th March 2025
           </TypingAnimation>
         </div>
 
-        <div className="flex justify-start items-center gap-2">
+        <div className="flex justify-start items-center gap-2 px-10">
           <MapPin />
-          <TypingAnimation className="font-redhat text-2xl font-bold my-2">
+          <TypingAnimation className="font-redhat text-xl font-bold my-2">
             Rajagiri School of Engineering and Technology, Kochi
           </TypingAnimation>
         </div>

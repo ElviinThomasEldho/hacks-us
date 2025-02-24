@@ -9,8 +9,8 @@ import {
 
 function Feature() {
   return (
-    <div id="about" className="w-full py-20 lg:py-40 font-redhat px-50">
-      <div className="container mx-auto">
+    <div id="about" className="w-full py-20 lg:py-40 font-redhat px-10 md:px-50">
+      <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 justify-end items-end  gap-10">
           <div className="w-full max-w-full px-6">
             <Carousel>
@@ -29,11 +29,11 @@ function Feature() {
               <CarouselNext />
             </Carousel>
           </div>
-          <div className="flex gap-4 flex-col items-start">
+          <div className="flex gap-4 flex-col items-start w-full">
             <div>
               <Badge>Hackathon</Badge>
             </div>
-            <div className="flex gap-2 flex-col">
+            <div className="flex gap-2 flex-col w-full">
               <h2 className="text-xl md:text-3xl lg:text-5xl tracking-tighter lg:max-w-xl font-chakra text-left">
                 About<br/> HACKS'US
               </h2>
