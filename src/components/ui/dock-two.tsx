@@ -85,7 +85,7 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
               "hover:shadow-xl transition-shadow duration-300"
             )}
           >
-            {/* <img className="h-8" src="src/img/logo_high.png" />
+            {/* <img className="h-8" src="/src/img/logo_high.png" />
             {items.map((item) => (
               <DockIconButton key={item.label} {...item} />
             ))} */}
@@ -98,7 +98,7 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
             </div>
 
             {/* Centered Logo */}
-            <img className="h-10" src="src/img/logo_high.png" />
+            <img className="h-10" src="/src/img/logo_high.png" />
 
             {/* Second half of items */}
             <div className="flex gap-3">

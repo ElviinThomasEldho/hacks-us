@@ -126,7 +126,7 @@ const LandingPage: React.FC = () => {
       <section id="home" className="relative z-10 flex flex-col items-center justify-center text-center min-h-[90vh]">
         {/* Logo & Title */}
         <header className="flex items-center justify-center">
-          <img src="src/img/logo_outline.png" alt="logo" className="w-24" />
+          <img src="/src/img/logo_outline.png" alt="logo" className="w-24" />
           <LineShadowText
             className="mt-16 text-4xl font-bold text-white font-chakra"
             shadowColor="#fff"

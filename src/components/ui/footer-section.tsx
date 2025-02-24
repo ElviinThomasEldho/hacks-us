@@ -43,10 +43,10 @@ function FooterSection() {
             {/* <p className="mb-6 text-muted-foreground">
               Join our newsletter for the latest updates and exclusive offers.
             </p> */}
-            <img className="w-40" src="src/img/iic.png" />
-            <img className="w-40" src="src/img/iedckerala-white.png" />
-            <img className="w-40" src="src/img/iicrset-white.png" />
-            <img className="w-40" src="src/img/rsetiedc-white.png" />
+            <img className="w-40" src="/src/img/iic.png" />
+            <img className="w-40" src="/src/img/iedckerala-white.png" />
+            <img className="w-40" src="/src/img/iicrset-white.png" />
+            <img className="w-40" src="/src/img/rsetiedc-white.png" />
             {/* </div> */}
 
             {/* <form className="relative">
@@ -106,7 +106,7 @@ function FooterSection() {
           </div>
           <div>
             {/* <h3 className="mb-4 text-lg font-semibold">Contact Us</h3> */}{" "}
-            <img className="w-60 mb-5" src="src/img/rset-white.png" />
+            <img className="w-60 mb-5" src="/src/img/rset-white.png" />
             <address className="space-y-2 text-sm not-italic">
               <p>X9V5+96P, Rajagiri Valley Rd</p>
               <p>Rajagiri Valley, Kakkanad, Kerala 682039</p>
