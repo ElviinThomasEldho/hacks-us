@@ -171,7 +171,7 @@ const LandingPage: React.FC = () => {
             className="mt-16 text-4xl font-bold text-white font-chakra"
             shadowColor="#fff"
           >
-            ACKS'US
+            ackS'US
           </LineShadowText>
         </header>
 

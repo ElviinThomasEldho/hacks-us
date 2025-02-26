@@ -79,10 +79,10 @@ function FooterSection() {
               <hr />
               <p className="font-bold">Abraham Manoj</p>
               <p className="flex gap-2">
-                <Phone size={20} /> +91 885 113 2782
+                <Phone size={20} /> +91 701 207 9459
               </p>
               <p className="flex gap-2">
-                <Mail size={20} /> elviin.t.eldho@gmail.com
+                <Mail size={20} /> abrahammadamana@gmail.com
               </p>
               <hr />
             </address>
@@ -214,7 +214,7 @@ function FooterSection() {
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 text-center md:flex-row">
           <p className="text-sm text-muted-foreground">
-            © 2024 RSET IEDC & IIC RSET. All rights reserved.
+            © 2025 RSET IEDC & IIC RSET. All rights reserved.
           </p>
           <nav className="flex gap-4 text-sm">
             <a href="#" className="transition-colors hover:text-primary">
