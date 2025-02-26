@@ -12,11 +12,12 @@ import { Feature } from "@/components/ui/feature-with-image-carousel";
 import { Badge } from "@/components/ui/badge";
 import { Dock } from "@/components/ui/dock-two";
 import { HyperText } from "@/components/magicui/hyper-text";
+import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 
 const LandingPage: React.FC = () => {
   const timelineData = [
     {
-      title: "22 Feb",
+      title: "26 Feb",
       content: (
         <div>
           <h3 className="text-2xl">Hackathon Regsitration Opens</h3>
@@ -26,39 +27,74 @@ const LandingPage: React.FC = () => {
     {
       title: "26 Feb",
       content: (
-        <div>
-          <h3 className="text-2xl">React Workshop</h3>
-          <Badge>Precursor</Badge>{" "}
+        <div className="flex gap-5 space-between items-center">
+          <img
+            className="w-100 rounded-2xl shadow-lg"
+            src="/src/img/event3.jpg"
+            alt=""
+          />
+          <div className="flex flex-col min-w-10 gap-1">
+            <h3 className="text-2xl uppercase font-bold">React-ivate</h3>
+            <Badge className="w-fit mb-3">React Workshop</Badge>{" "}
+            <p className="">
+              A <strong>One-Day</strong> Workshop on <strong>React</strong>,
+              taking particpants from zero to hero by building an AI powered
+              chat app.
+            </p>
+          </div>
         </div>
       ),
     },
     {
       title: "27 Feb",
       content: (
-        <div>
-          <h3 className="text-2xl">RAG Workshop</h3>
-          <Badge>Precursor</Badge>{" "}
+        <div className="flex gap-5 space-between items-center">
+          <img
+            className="w-100 rounded-2xl shadow-lg"
+            src="/src/img/event2.jpg"
+            alt=""
+          />
+          <div className="flex flex-col min-w-10 gap-1">
+            <h3 className="text-2xl uppercase font-bold">RAG-volution</h3>
+            <Badge className="w-fit mb-3">RAG Workshop</Badge>{" "}
+            <p className="">
+              A <strong>hands on</strong> session on{" "}
+              <strong>Retiveal Augmented Generation (RAG)</strong> using{" "}
+              <strong>Google Colab</strong> and <strong>Python</strong>
+            </p>
+          </div>
         </div>
       ),
     },
     {
-      title: "1 Mar",
+      title: "2 Mar",
       content: (
-        <div>
-          <h3 className="text-2xl">UI/UX Hackathon</h3>
-          <Badge>Precursor</Badge>
+        <div className="flex gap-5 space-between items-center">
+          <img
+            className="w-100 rounded-2xl shadow-lg"
+            src="/src/img/event1.jpg"
+            alt=""
+          />
+          <div className="flex flex-col min-w-10 gap-1">
+            <h3 className="text-2xl uppercase font-bold">UI-Alchemist</h3>
+            <Badge className="w-fit mb-3">UI / UX Workshop</Badge>{" "}
+            <p className="">
+              A <strong>12-hour</strong> design hackathon using{" "}
+              <strong>Figma</strong>
+            </p>
+          </div>
         </div>
       ),
     },
-    {
-      title: "2 - 8 Mar",
-      content: (
-        <div>
-          <h3 className="text-2xl">Game Jam</h3>
-          <Badge>Precursor</Badge>{" "}
-        </div>
-      ),
-    },
+    // {
+    //   title: "2 - 8 Mar",
+    //   content: (
+    //     <div>
+    //       <h3 className="text-2xl">Game Jam</h3>
+    //       <Badge>Precursor</Badge>{" "}
+    //     </div>
+    //   ),
+    // },
     {
       title: "7 Mar",
       content: (
@@ -144,14 +180,14 @@ const LandingPage: React.FC = () => {
           Register Now
         </InteractiveHoverButton>
         <div className="flex flex-col md:flex-row">
-          <div className="flex justify-start items-center gap-2 px-10">
+          <div className="flex justify-start items-center gap-4 px-10">
             <CalendarIcon size="20px" className="w-min-30" />
             <TypingAnimation className="font-redhat text-xl font-bold my-2 max-w-60">
               14th - 16th March 2025
             </TypingAnimation>
           </div>
 
-          <div className="flex justify-start items-center gap-2 px-10">
+          <div className="flex justify-start items-center gap-4 px-10">
             <MapPin size="20px" />
             <TypingAnimation className="font-redhat text-lg font-bold my-2 max-w-60 text-left">
               Rajagiri School of Engineering and Technology, Kochi
@@ -170,7 +206,15 @@ const LandingPage: React.FC = () => {
 
       <Feature />
 
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-10  bg-linear-to-t from-neutral-950/80 via-neutral-950/60 w-screen py-30 px-20">
+      <HeroVideoDialog
+        className="block w-300"
+        animationStyle="from-center"
+        videoSrc="https://www.youtube.com/embed/e_oKYPvK1vo"
+        thumbnailSrc="/src/img/thumbnail.png"
+        thumbnailAlt="Hero Video"
+      />
+
+      <section className="flex flex-col md:flex-row justify-center gap-10 md:gap-50  bg-linear-to-t from-neutral-950/80 via-neutral-950/50 w-screen py-30 px-20">
         <div className="flex flex-col items-center">
           <HyperText
             className="font-redhat text-3xl md:text-3xl text-center"
@@ -180,7 +224,7 @@ const LandingPage: React.FC = () => {
           </HyperText>
           <p className="font-redhat text-2xl">Teams</p>
         </div>
-        <div className="flex flex-col items-center">
+        {/* <div className="flex flex-col items-center">
           <HyperText
             className="font-redhat text-3xl md:text-3xl text-center"
             animateOnHover={false}
@@ -197,6 +241,15 @@ const LandingPage: React.FC = () => {
             4
           </HyperText>
           <p className="font-redhat text-2xl">Tracks</p>
+        </div> */}
+        <div className="flex flex-col items-center">
+          <HyperText
+            className="font-redhat text-3xl md:text-3xl text-center"
+            animateOnHover={false}
+          >
+            500+
+          </HyperText>
+          <p className="font-redhat text-2xl">Participants</p>
         </div>
       </section>
 
